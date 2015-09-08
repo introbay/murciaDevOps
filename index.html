@@ -6,8 +6,8 @@
 
 		<title>INTROBAY - Introducción a Docker</title>
 
-		<meta name="description" content="Aislando procesos en Docker">
-		<meta name="author" content="Ignacio López Flores">
+		<meta name="description" content="Introducción a Drupal">
+		<meta name="author" content="Ignacio López Flores - Introbay">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -41,249 +41,122 @@
         <div class="reveal">
             <div class="slides">
                 <section>
-                    <h2>Introducción a Docker</h2>
-                    <img style="border: none;" src="imgs/large_h-trans.png">
-                    <h3>Betabeers Murcia XI</h3>
-                    <p>Ignacio López Flores</p>
-
+                    <h1>Introducción a Drupal</h1>
                 </section>
                 <section>
-                    <img align="left" src="imgs/ignacio.png" width="250" border="none">
-                    <div style="float: right;">
-                        <img src="imgs/logo-tag-centro-blanco.svg" width="600" style="border: none; background: none; box-shadow: none">
-                        <p>Ignacio L&oacute;pez Flores -&nbsp;<a href="https://twitter.com/ignaciolflores" target="_blank">@ignaciolflores</a></p>
-                        <p>Founder & CEO @ Introbay</p>
-                        <a href="http://about.me/ignaciolflores" target="_blank">about.me/ignaciolflores</a>
-                    </div>
-                </section>
-
-                <section>
-                    <h2>Todo comenzó en Marzo de 2013</h2>
-                </section>
-
-                <section>
-                    <h2>Y desde entonces...</h2>
+                    <h2>Qué es Drupal</h2>
                     <ul>
-                        <li class="fragment">> 200.000 pulls</li>
-                        <li class="fragment">>7,500 estrellas en Github</li>
-                        <li class="fragment">>200 contribuidores importantes</li>
-                        <li class="fragment">>200 proyectos realizados sobre docker</li>
-                        <li class="fragment">>13.000 aplicaciones Dockerizadas</li>
-                        <ul>
-                            <li class="fragment">Memcached, Redis, Node.js, Hadoop...</li>
-                        </ul>
-                        <li class="fragment">Integración en Jenkins, Travis, Chef, Puppet, Vagrant y OpenStack</li>
-                        <li class="fragment">Meetups por todas partes...</li>
-                        <ul>
-                            <li class="fragment">con organizaciones como Ebay, Cloudflare, Betabeers,...</li>
-                        </ul>
+                        <li class="fragment">Gestor de contenidos modular y muy configurable.</li>
+                        <li class="fragment">Ideal para crear sitios web dinámicos y con gran variedad de funcionalidades.</li>
                     </ul>
                 </section>
 
                 <section>
-                    <h2>El Reto</h2>
-                    <img src="imgs/el-reto.png">
+                    <h2>Qué es Drupal</h2>
+                    <p>Miles de módulos y diseños creados para Drupal.</p>
+                    <img src="imgs/flecha_azul_abajo.svg" style="border:none; width:85px ">
+                    <p>Minimiza código a medida</p>
+                    <img src="imgs/flecha_azul_abajo.svg" style="border:none; width:85px ">
+                    <p>Optimizando la eficiencia de portales</p>
                 </section>
 
                 <section>
-                    <h2>La Matriz del Infierno</h2>
-                    <img src="imgs/the-matrix-from-hell.png" style="background-color: #ffffff" width="80%">
-                </section>
-
-                <section>
-                    <h2>Transportes antes de los 60</h2>
-                    <img src="imgs/cargo-transport-pre-1960.png" style="background-color: #ffffff" width="80%">
-                </section>
-
-                <section>
-                    <h2>Tenían su propia matriz del infierno</h2>
-                    <img src="imgs/also-a-matrix-from-hell.png" style="background-color: #ffffff" width="80%">
-                </section>
-
-                <section>
-                    <h2>¿Cómo lo solucionaron?</h2>
-                    <h3>Contenedores de transporte</h3>
-                    <img src="imgs/intermodal-shipping-container.png" style="background-color: #ffffff" width="80%">
-                </section>
-
-                <section>
-                    <h3>Se puede ver Docker como</h3>
-                    <h2>Un sistema de Contenedores para Código</h2>
-                    <img src="imgs/shipping-container-for-code.png" style="background-color: #ffffff" width="80%">
-                </section>
-
-                <section>
-                    <h2>Docker elimina La matriz del Infierno</h2>
-                    <img src="imgs/eliminates-matrix-from-hell.png" style="background-color: #ffffff" width="80%">
-                </section>
-
-                <section>
-                    <h2>¿Por qué le gusta a los desarrolladores?</h2>
+                    <h2>Drupal = Flexibilidad</h2>
                     <ul>
-                        <li class="fragment">Se construye una vez... y se ejecuta en cualquier parte*</li>
-                        <li class="fragment">Un entorno de ejecución limpio, seguro, higiénico y portable para tus aplicaciones.</li>
-                        <li class="fragment">Una vez desplegado, no hay que volver a preocuparse por dependencias, paquetes y otras configuraciones que suelen traer dolores de cabeza.</li>
-                        <li class="fragment">Cada aplicación se ejecuta en su propio contenedor aislado, eso nos permite tener distintas versiones de librerías y otras dependencias para cada aplicación sin preocupaciones.</li>
+                        <li>Una de las plataformas más flexibles</li>
+                        <li>Altamente personalizable</li>
                     </ul>
-                    <p>* Donde “cualquier parte” quiere decir un servidor x86 ejecutando un kernel Linux (generalmente 3.2+ o 2.6.32+ para RHEL o derivados)</p>
+                    <p>
+                        <img style="width:300px" src="imgs/features.png">
+                    </p>
                 </section>
 
                 <section>
-                    <h2>¿Por qué le gusta a los desarrolladores?</h2>
+                    <h2>Drupal = Amplia comunidad profesional</h2>
+
                     <ul>
-                        <li class="fragment">Test automáticos, integración continua, empaquetado... en definitiva, cualquier cosa para la que se pueda escribir un script.</li>
-                        <li class="fragment">Elimina problemas sobre compatibilidad en diferentes plataformas, tanto en la tuya como en la de tus clientes.</li>
-                        <li class="fragment">No hay penalización a la hora de desplegar servicios. Una VM sin la sobrecarga de una VM. Se pueden re-lanzar y resetear imágenes al instante.</li>
+                        <li>Drupal.org tiene más de 1 millón de usuarios</li>
+                        <li>230 paises</li>
+                        <li>181 idiomas</li>
+                        <li>Profesionalización = Usuarios cualificados</li>
                     </ul>
                 </section>
 
                 <section>
-                    <h2>¿Por qué le gusta a los administradores?</h2>
+                    <h2>Drupal = Open Source</h2>
+
+                    <p>Código abierto</p>
+                    <img src="imgs/flecha_azul_abajo.svg" style="border:none; width:85px ">
+                    <p>Continuo crecimiento y desarrollo</p>
+                    <img src="imgs/flecha_azul_abajo.svg" style="border:none; width:85px ">
+                    <p>Última generación</p>
+                </section>
+
+                <section>
+                    <h2>Drupal = Open Source</h2>
+
                     <ul>
-                        <li class="fragment">Lo configuramos una vez... y lo ejecutamos cada vez que queramos.</li>
-                        <li class="fragment">Consigue que el ciclo de vida sea más eficiente, consistente y repetible.</li>
-                        <li class="fragment">Incrementa la calidad del código de los desarrolladores. Elimina inconsistencias entre entornos de desarrollo, test, producción, etc.</li>
+                    <h3>Ventajas:</h3>
+                        <li>No pago de licencias</li>
+                        <li>Cambios de manera rápida</li>
+                        <li>Reducción de costes</li>
+                        <li>Escalable</li>
+                        <li>Solución de errores y mejora con más rapidez</li>
                     </ul>
                 </section>
 
                 <section>
-                    <h2>¿Por qué le gusta a los administradores?</h2>
-                    <ul>
-                        <li class="fragment">Mejora significativamente la velocidad en despliegues automáticos y en sistemas de integración continua.</li>
-                        <li class="fragment">Como los contenedores son muy ligeros, se eliminan los problemas de rendimiento, costes, despliegues y problemas de portabilidad a los que normalmente están asociadas las VM.</li>
-                    </ul>
+                    <h3>¡Es gratuito, no tiene licencia de uso y su código es abierto!</h3>
+
+                    <img style="width:400px" src="imgs/contr.png">
                 </section>
 
                 <section>
-                    <h2>¿Por qué funciona? Separación de conceptos</h2>
-                    <div style="float: left; width: 45%; font-size: 85%">
-                        <h3>Lo de dentro</h3>
-                        Pepe el desarrollador <br>
-                        Se preocupa por lo que está dentro del contenedor:
-                        <ul>
-                            <li>Su código</li>
-                            <li>Sus librerías</li>
-                            <li>Sus aplicaciones</li>
-                            <li>Sus datos</li>
-                            Para el, todos los servidores linux son iguales
-                        </ul>
-                        Para el, todos los servidores linux son iguales
-                    </div>
+                    <h2>Drupal = Seguridad</h2>
 
-                    <div style="float: right; width: 45%; font-size: 85%">
-                        <h3>Lo de fuera</h3>
-                        Paco el administrador <br>
-                        Se preocupa por lo que está fuera del contenedor:
-                        <ul>
-                            <li>Ficheros de log</li>
-                            <li>Acceso remoto</li>
-                            <li>Monitorización</li>
-                            <li>Configuración de red</li>
-                        </ul>
-                        Todos los contenedores hacen lo mismo y de la misma manera: start, stop, copy, migrate, etc.
-                    </div>
+                    <p>Uno de los gestores de contenidos más seguros que existen ya que está construido con la seguridad en mente</p>
+
+                    <p>Control total de la plataforma y un sistema de permisos basado en roles</p>
                 </section>
 
                 <section>
-                    <h2>Más detalles técnicos</h2>
-                    <h3>Se ejecuta en cualquier parte</h3>
-                    <ul>
-                        <li>Indep. de la versión del kernel</li>
-                        <li>Indep. de la distro del host</li>
-                        <li>Virtual o físico, en la nube o en hierro</li>
-                    </ul>
+                    <h2>Drupal = Seguridad</h2>
+
+                    <p>Drupal.org mantiene a un equipo dedicado exclusivamente a la seguridad</p>
+
+                    <img style="width:350px; border:none" src="imgs/shield.png">
                 </section>
 
                 <section>
-                    <h2>Más detalles técnicos</h2>
-                    <h3>Se puede ejecutar cualquier cosa</h3>
-                    <ul>
-                        <li>Si se puede ejecutar en el host, se puede ejecutar en el contenedor.</li>
-                        <li>Si se puede ejecutar sobre un kernel Linux, se puede ejecutar</li>
-                    </ul>
-                </section>
+                    <h2>Drupal = Webs Importantes</h2>
 
-                <section>
-                    <h2>Más detalles técnicos</h2>
-                    <h3>A alto nivel: una VM ligera</h3>
-                    <ul>
-                        <li>Propio espacio de procesos</li>
-                        <li>Propia interfaz de red</li>
-                        <li>Puede ejecutar órdenes como root</li>
-                        <li>Puede tener su propio /sbin/init</li>
-                        <li>Contenedor == Máquina</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h2>Más detalles técnicos</h2>
-                    <h3>A bajo nivel: CHROOT con esteroides</h3>
-                    <ul>
-                        <li>Puede no tener su propio /sbin/init</li>
-                        <li>Contenedor = procesos aislados</li>
-                        <li>Comparte el kernel con el host</li>
-                        <li>Contenedor == Aplicación</li>
-                    </ul>
-                </section>
-
-
-                <section>
-                    <h2>VMs vs Contenedores</h2>
-
-                    <div style="float: left; width: 45%;">
-                        <img src="imgs/VM-vs-container.png">
-                    </div>
-                    <div style="float: right; width: 45%;">
-
-                        <h4>Los contenedores están aislados, pero comparten el kernel</h4>
-                        <p>... lo que aporta los beneficios de las VM pero con mucha menos sobrecarga, más portabilidad y eficiencia</p>
-                    </div>
-                </section>
-
-                <section>
-                    <h2>Ejemplos prácticos</h2>
-                    <img src="imgs/jira-pg.png" style="background-color: #ffffff" width="80%">
-                </section>
-
-                <section>
-                    <h2>Ejemplos prácticos</h2>
-                    <img src="imgs/jira-stash-pg.png" style="background-color: #ffffff" width="80%">
-                </section>
-
-                <section>
-                    <h2>Ejemplos prácticos</h2>
-                    <img src="imgs/jira-pg-stash-pg.png" style="background-color: #ffffff" width="80%">
-                </section>
-
-                <section>
-                    <h2>Ejemplos prácticos</h2>
-                    <img src="imgs/nginx-jira-stash.png" style="background-color: #ffffff" width="80%">
-                </section>
-
-                <section>
-                    <h2>Enlaces de interés</h2>
                     <ul>
                         <li>
-                            <a href="http://introbay.com" target="_blank">introbay.com</a>
+                            Internacionales: <br/>
+                            <a target="_blank" href="http://www.warnerbros.com/">Warner Bros</a>, 
+                            <a target="_blank" href="http://zyngagames.com/">Zynga</a>, 
+                            <a target="_blank" href="http://www.weather.com/">The Weather Channel</a>, 
+                            <a target="_blank" href="http://www.menshealth.com/">Mens Health</a>, 
+                            <a target="_blank" href="http://www.lefigaro.fr/">Le Figaro</a>, 
+                            <a target="_blank" href="http://www.royalmail.com/">Royal Mail</a>, 
+                            <a target="_blank" href="http://www.economist.com/">The Economist</a> o la misma
+                            <a target="_blank" href="https://www.whitehouse.gov/">Casa Blanca</a>
                         </li>
                         <li>
-                            <a href="http://docker.io" target="_blank">docker.io</a>
-                        </li>
-                        <li>
-                            <a href="http://stackengine.com" target="_blank">stackengine.com</a>
-                        </li>
-                        <li>
-                            <a href="http://slideshare.net/dotCloud/presentations" target="_blank">slideshare.net/dotCloud/presentations</a>
-                        </li>
-                        <li>
-                            <a href="http://registry.hub.docker.com" target="_blank">registry.hub.docker.com</a>
-                        </li>
-                        <li>
-                            <a href="http://platform.sh" target="_blank">platform.sh</a>
+                            Nacionales: <br/>
+                            <a target="_blank" href="http://www.rae.es/">RAE</a>, 
+                            <a target="_blank" href="http://kinepolis.es/">Kinepolis</a>, 
+                            <a target="_blank" href="http://www.telemadrid.es/">Telemadrid</a>, 
+                            <a target="_blank" href="http://www.museoreinasofia.es/">Museo Reina Sofía</a>,
+                            <a target="_blank" href="http://www.idealista.com/news/">Idealista News</a>,  
+                            <a target="_blank" href="http://www.mcdonalds.es/">McDonalds</a>, 
+                            <a target="_blank" href="http://www.castillalamancha.es/">Ayuntamiento de Castilla La Mancha</a>, 
+                            <a target="_blank" href="http://parquedeatracciones.es/">Parque de Atracciones de Madrid</a>, 
+                            <a target="_blank" href="http://www.boing.es/">Boing</a>, 
+                            <a target="_blank" href="http://faunia.es/">Faunia</a>, ... y cada día más.
                         </li>
                     </ul>
                 </section>
-
             </div>
         </div>
 
@@ -304,7 +177,8 @@
 
 
                 // Parallax background image
-                parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+                parallaxBackgroundImage: 'imgs/drupal-background.jpg', 
+                // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
 
                 // Parallax background size
                 parallaxBackgroundSize: '2100px 900px', // CSS syntax, e.g. "2100px 900px"
