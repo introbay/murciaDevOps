@@ -1,1 +1,335 @@
-# Introducción a Drupal
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>INTROBAY - Introducción a Docker</title>
+
+		<meta name="description" content="Aislando procesos en Docker">
+		<meta name="author" content="Ignacio López Flores">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+        <!-- Slides  content to be added here -->
+
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <h2>Introducción a Docker</h2>
+                    <img style="border: none;" src="imgs/large_h-trans.png">
+                    <h3>Betabeers Murcia XI</h3>
+                    <p>Ignacio López Flores</p>
+
+                </section>
+                <section>
+                    <img align="left" src="imgs/ignacio.png" width="250" border="none">
+                    <div style="float: right;">
+                        <img src="imgs/logo-tag-centro-blanco.svg" width="600" style="border: none; background: none; box-shadow: none">
+                        <p>Ignacio L&oacute;pez Flores -&nbsp;<a href="https://twitter.com/ignaciolflores" target="_blank">@ignaciolflores</a></p>
+                        <p>Founder & CEO @ Introbay</p>
+                        <a href="http://about.me/ignaciolflores" target="_blank">about.me/ignaciolflores</a>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Todo comenzó en Marzo de 2013</h2>
+                </section>
+
+                <section>
+                    <h2>Y desde entonces...</h2>
+                    <ul>
+                        <li class="fragment">> 200.000 pulls</li>
+                        <li class="fragment">>7,500 estrellas en Github</li>
+                        <li class="fragment">>200 contribuidores importantes</li>
+                        <li class="fragment">>200 proyectos realizados sobre docker</li>
+                        <li class="fragment">>13.000 aplicaciones Dockerizadas</li>
+                        <ul>
+                            <li class="fragment">Memcached, Redis, Node.js, Hadoop...</li>
+                        </ul>
+                        <li class="fragment">Integración en Jenkins, Travis, Chef, Puppet, Vagrant y OpenStack</li>
+                        <li class="fragment">Meetups por todas partes...</li>
+                        <ul>
+                            <li class="fragment">con organizaciones como Ebay, Cloudflare, Betabeers,...</li>
+                        </ul>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>El Reto</h2>
+                    <img src="imgs/el-reto.png">
+                </section>
+
+                <section>
+                    <h2>La Matriz del Infierno</h2>
+                    <img src="imgs/the-matrix-from-hell.png" style="background-color: #ffffff" width="80%">
+                </section>
+
+                <section>
+                    <h2>Transportes antes de los 60</h2>
+                    <img src="imgs/cargo-transport-pre-1960.png" style="background-color: #ffffff" width="80%">
+                </section>
+
+                <section>
+                    <h2>Tenían su propia matriz del infierno</h2>
+                    <img src="imgs/also-a-matrix-from-hell.png" style="background-color: #ffffff" width="80%">
+                </section>
+
+                <section>
+                    <h2>¿Cómo lo solucionaron?</h2>
+                    <h3>Contenedores de transporte</h3>
+                    <img src="imgs/intermodal-shipping-container.png" style="background-color: #ffffff" width="80%">
+                </section>
+
+                <section>
+                    <h3>Se puede ver Docker como</h3>
+                    <h2>Un sistema de Contenedores para Código</h2>
+                    <img src="imgs/shipping-container-for-code.png" style="background-color: #ffffff" width="80%">
+                </section>
+
+                <section>
+                    <h2>Docker elimina La matriz del Infierno</h2>
+                    <img src="imgs/eliminates-matrix-from-hell.png" style="background-color: #ffffff" width="80%">
+                </section>
+
+                <section>
+                    <h2>¿Por qué le gusta a los desarrolladores?</h2>
+                    <ul>
+                        <li class="fragment">Se construye una vez... y se ejecuta en cualquier parte*</li>
+                        <li class="fragment">Un entorno de ejecución limpio, seguro, higiénico y portable para tus aplicaciones.</li>
+                        <li class="fragment">Una vez desplegado, no hay que volver a preocuparse por dependencias, paquetes y otras configuraciones que suelen traer dolores de cabeza.</li>
+                        <li class="fragment">Cada aplicación se ejecuta en su propio contenedor aislado, eso nos permite tener distintas versiones de librerías y otras dependencias para cada aplicación sin preocupaciones.</li>
+                    </ul>
+                    <p>* Donde “cualquier parte” quiere decir un servidor x86 ejecutando un kernel Linux (generalmente 3.2+ o 2.6.32+ para RHEL o derivados)</p>
+                </section>
+
+                <section>
+                    <h2>¿Por qué le gusta a los desarrolladores?</h2>
+                    <ul>
+                        <li class="fragment">Test automáticos, integración continua, empaquetado... en definitiva, cualquier cosa para la que se pueda escribir un script.</li>
+                        <li class="fragment">Elimina problemas sobre compatibilidad en diferentes plataformas, tanto en la tuya como en la de tus clientes.</li>
+                        <li class="fragment">No hay penalización a la hora de desplegar servicios. Una VM sin la sobrecarga de una VM. Se pueden re-lanzar y resetear imágenes al instante.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>¿Por qué le gusta a los administradores?</h2>
+                    <ul>
+                        <li class="fragment">Lo configuramos una vez... y lo ejecutamos cada vez que queramos.</li>
+                        <li class="fragment">Consigue que el ciclo de vida sea más eficiente, consistente y repetible.</li>
+                        <li class="fragment">Incrementa la calidad del código de los desarrolladores. Elimina inconsistencias entre entornos de desarrollo, test, producción, etc.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>¿Por qué le gusta a los administradores?</h2>
+                    <ul>
+                        <li class="fragment">Mejora significativamente la velocidad en despliegues automáticos y en sistemas de integración continua.</li>
+                        <li class="fragment">Como los contenedores son muy ligeros, se eliminan los problemas de rendimiento, costes, despliegues y problemas de portabilidad a los que normalmente están asociadas las VM.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>¿Por qué funciona? Separación de conceptos</h2>
+                    <div style="float: left; width: 45%; font-size: 85%">
+                        <h3>Lo de dentro</h3>
+                        Pepe el desarrollador <br>
+                        Se preocupa por lo que está dentro del contenedor:
+                        <ul>
+                            <li>Su código</li>
+                            <li>Sus librerías</li>
+                            <li>Sus aplicaciones</li>
+                            <li>Sus datos</li>
+                            Para el, todos los servidores linux son iguales
+                        </ul>
+                        Para el, todos los servidores linux son iguales
+                    </div>
+
+                    <div style="float: right; width: 45%; font-size: 85%">
+                        <h3>Lo de fuera</h3>
+                        Paco el administrador <br>
+                        Se preocupa por lo que está fuera del contenedor:
+                        <ul>
+                            <li>Ficheros de log</li>
+                            <li>Acceso remoto</li>
+                            <li>Monitorización</li>
+                            <li>Configuración de red</li>
+                        </ul>
+                        Todos los contenedores hacen lo mismo y de la misma manera: start, stop, copy, migrate, etc.
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Más detalles técnicos</h2>
+                    <h3>Se ejecuta en cualquier parte</h3>
+                    <ul>
+                        <li>Indep. de la versión del kernel</li>
+                        <li>Indep. de la distro del host</li>
+                        <li>Virtual o físico, en la nube o en hierro</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Más detalles técnicos</h2>
+                    <h3>Se puede ejecutar cualquier cosa</h3>
+                    <ul>
+                        <li>Si se puede ejecutar en el host, se puede ejecutar en el contenedor.</li>
+                        <li>Si se puede ejecutar sobre un kernel Linux, se puede ejecutar</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Más detalles técnicos</h2>
+                    <h3>A alto nivel: una VM ligera</h3>
+                    <ul>
+                        <li>Propio espacio de procesos</li>
+                        <li>Propia interfaz de red</li>
+                        <li>Puede ejecutar órdenes como root</li>
+                        <li>Puede tener su propio /sbin/init</li>
+                        <li>Contenedor == Máquina</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Más detalles técnicos</h2>
+                    <h3>A bajo nivel: CHROOT con esteroides</h3>
+                    <ul>
+                        <li>Puede no tener su propio /sbin/init</li>
+                        <li>Contenedor = procesos aislados</li>
+                        <li>Comparte el kernel con el host</li>
+                        <li>Contenedor == Aplicación</li>
+                    </ul>
+                </section>
+
+
+                <section>
+                    <h2>VMs vs Contenedores</h2>
+
+                    <div style="float: left; width: 45%;">
+                        <img src="imgs/VM-vs-container.png">
+                    </div>
+                    <div style="float: right; width: 45%;">
+
+                        <h4>Los contenedores están aislados, pero comparten el kernel</h4>
+                        <p>... lo que aporta los beneficios de las VM pero con mucha menos sobrecarga, más portabilidad y eficiencia</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Ejemplos prácticos</h2>
+                    <img src="imgs/jira-pg.png" style="background-color: #ffffff" width="80%">
+                </section>
+
+                <section>
+                    <h2>Ejemplos prácticos</h2>
+                    <img src="imgs/jira-stash-pg.png" style="background-color: #ffffff" width="80%">
+                </section>
+
+                <section>
+                    <h2>Ejemplos prácticos</h2>
+                    <img src="imgs/jira-pg-stash-pg.png" style="background-color: #ffffff" width="80%">
+                </section>
+
+                <section>
+                    <h2>Ejemplos prácticos</h2>
+                    <img src="imgs/nginx-jira-stash.png" style="background-color: #ffffff" width="80%">
+                </section>
+
+                <section>
+                    <h2>Enlaces de interés</h2>
+                    <ul>
+                        <li>
+                            <a href="http://introbay.com" target="_blank">introbay.com</a>
+                        </li>
+                        <li>
+                            <a href="http://docker.io" target="_blank">docker.io</a>
+                        </li>
+                        <li>
+                            <a href="http://stackengine.com" target="_blank">stackengine.com</a>
+                        </li>
+                        <li>
+                            <a href="http://slideshare.net/dotCloud/presentations" target="_blank">slideshare.net/dotCloud/presentations</a>
+                        </li>
+                        <li>
+                            <a href="http://registry.hub.docker.com" target="_blank">registry.hub.docker.com</a>
+                        </li>
+                        <li>
+                            <a href="http://platform.sh" target="_blank">platform.sh</a>
+                        </li>
+                    </ul>
+                </section>
+
+            </div>
+        </div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+
+                // Parallax background image
+                parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+                // Parallax background size
+                parallaxBackgroundSize: '2100px 900px', // CSS syntax, e.g. "2100px 900px"
+
+                // Amount to move parallax background (horizontal and vertical) on slide change
+                // Number, e.g. 100
+                //parallaxBackgroundHorizontal: '',
+                //parallaxBackgroundVertical: '',
+
+                math: {
+                    mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
+                    config: 'TeX-AMS_HTML-full' // See http://docs.mathjax.org/en/latest/config-files.html
+                },
+                // Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
