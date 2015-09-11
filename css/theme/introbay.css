@@ -306,3 +306,8 @@ body {
   margin-right: 25px;
   color: #008ec4;
 }
+
+.resaltado {
+  font-weight: bold;
+  color: #008ec4;
+}
