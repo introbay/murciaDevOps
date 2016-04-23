@@ -87,12 +87,12 @@
                     <section>
                         <h2>Conceptos básicos</h2>
                         <ul>
-                            <li class="fragment"><span class="resaltado">Virtualización: </span>Creación por software de la versión virtual de un recurso tecnológico, habitualmente servidores.</li>
-                            <li class="fragment"><span class="resaltado">Maquina virtual (VM): </span>Emulación de una ordenador físico por medio de software en un sistema anfitrión.</li>
-                            <li class="fragment"><span class="resaltado">Hipervisor: </span>Sistema anfitrión sobre el que funcionan las VM, puede ser por software ó hardware (poco habituales).</li>
+                            <li><span class="resaltado">Virtualización: </span>Creación por software de la versión virtual de un recurso tecnológico, habitualmente servidores.</li>
+                            <li><span class="resaltado">Maquina virtual (VM): </span>Emulación de una ordenador físico por medio de software en un sistema anfitrión.</li>
+                            <li><span class="resaltado">Hipervisor: </span>Sistema anfitrión sobre el que funcionan las VM, puede ser por software ó hardware (poco habituales).</li>
                             <ul>
-                                <li class="fragment"><span class="resaltado">Escritorio: </span>virtualbox, vmware, etc.</li>
-                                <li class="fragment"><span class="resaltado">Servidor: </span>xenserver, proxmox, etc.</li>
+                                <li><span class="resaltado">Escritorio: </span>virtualbox, vmware, etc.</li>
+                                <li><span class="resaltado">Servidor: </span>xenserver, proxmox, etc.</li>
                             </ul>
                         </ul>
                     </section>
@@ -100,11 +100,11 @@
                         <h2>Linux Containers (LCX)</h2>
                         <!--<img class="sin-cajas" style="width:600px" src="imgs/Linux-containers.jpg">-->
                         <ul>
-                            <li class="fragment">Permite que un servidor físico ejecute <span class="resaltado">múltiples instancias</span> de sistemas operativos aislados compartiendo el core.</li>
-                            <li class="fragment">Pueden tener diferentes Sistemas Operativos (debian, centos, redhat, ubuntu, etc.) siempre que tengan la <span class="resaltado">misma versión del core</span> que el sistema anfitrión.</li>
-                            <li class="fragment">Consumen <span class="resaltado">menos recursos</span> hardware y software que las VM.</li>
-                            <li class="fragment">Implementación basada en <span class="resaltado">imágenes</span>.</li>
-                            <li class="fragment"><span class="resaltado">Aislamiento de aplicaciones</span> que se pueden combinar.</li>
+                            <li>Permite que un servidor físico ejecute <span class="resaltado">múltiples instancias</span> de sistemas operativos aislados compartiendo el core.</li>
+                            <li>Pueden tener diferentes Sistemas Operativos (debian, centos, redhat, ubuntu, etc.) siempre que tengan la <span class="resaltado">misma versión del core</span> que el sistema anfitrión.</li>
+                            <li>Consumen <span class="resaltado">menos recursos</span> hardware y software que las VM.</li>
+                            <li>Implementación basada en <span class="resaltado">imágenes</span>.</li>
+                            <li><span class="resaltado">Aislamiento de aplicaciones</span> que se pueden combinar.</li>
                         </ul>
                     </section>
                     <section>
@@ -115,10 +115,10 @@
                     <section>
                         <h2>Y llegó Docker</h2>
                         <ul>
-                            <li class="fragment">LCX <span class="resaltado">independiza</span> sistemas operativos ligeros sobre los que lanzar aplicaciones.</li>
-                            <li class="fragment">Docker define un formato para <span class="resaltado">empaquetar una aplicación</span> y todas sus <span class="resaltado">dependencias</span> en un solo objeto que pueden ser transferidas a cualquier otro sistema Docker, y ser ejecutados allí con la garantía de que el entorno de ejecución será <span class="resaltado">siempre el mismo.</span></li>
-                            <li class="fragment"><strong>Contenedores:</strong> contienen todo lo necesario para que una aplicación pueda funcionar.</li>
-                            <li class="fragment"><strong>Imágenes:</strong> sistema operativo con aplicaciones instaladas y configuradas.</li>
+                            <li>LCX <span class="resaltado">independiza</span> sistemas operativos ligeros sobre los que lanzar aplicaciones.</li>
+                            <li>Docker define un formato para <span class="resaltado">empaquetar una aplicación</span> y todas sus <span class="resaltado">dependencias</span> en un solo objeto que pueden ser transferidas a cualquier otro sistema Docker, y ser ejecutados allí con la garantía de que el entorno de ejecución será <span class="resaltado">siempre el mismo.</span></li>
+                            <li><strong>Contenedores:</strong> contienen todo lo necesario para que una aplicación pueda funcionar.</li>
+                            <li><strong>Imágenes:</strong> sistema operativo con aplicaciones instaladas y configuradas.</li>
                         </ul>
                     </section>
                     <section>
@@ -128,13 +128,13 @@
                     <section>
                         <h2>Docker Registry</h2>
                         <ul>
-                            <li class="fragment"><span class="resaltado">Registry: </span>Servidor que contiene repositorios e imágenes.</li>
-                            <li class="fragment"><span class="resaltado">Repositorios: </span>Contiene imagenes creadas y listas para ser descargadas.</li>
-                            <li class="fragment">Repositorio oficial <span class="resaltado">
+                            <li><span class="resaltado">Registry: </span>Servidor que contiene repositorios e imágenes.</li>
+                            <li><span class="resaltado">Repositorios: </span>Contiene imagenes creadas y listas para ser descargadas.</li>
+                            <li>Repositorio oficial <span class="resaltado">
                                 <a target="_blank" href="https://hub.docker.com/">https://hub.docker.com</a>
-                            <li class="fragment">En <span class="resaltado">Dockerhub</span> podemos crear repositorios privados ó públicos.</li>
-                            <li class="fragment">Dockerhub se integra con repositorios de código como <span class="resaltado">GitHub</span> y construye las imagenes al actualizarlos.</li>
-                            <li class="fragment">También podemos tener nuestro propio Registry que se crea a partir de una imagen Docker.</li>
+                            <li>En <span class="resaltado">Dockerhub</span> podemos crear repositorios privados ó públicos.</li>
+                            <li>Dockerhub se integra con repositorios de código como <span class="resaltado">GitHub</span> y construye las imagenes al actualizarlos.</li>
+                            <li>También podemos tener nuestro propio Registry que se crea a partir de una imagen Docker.</li>
                         </ul>
                         <!--<img class="sin-cajas" style="width:600px" src="imgs/docker-structure.jpg">-->
                     </section>
@@ -143,26 +143,26 @@
                 <section>
                     <h2>Requisitos de Docker</h2>
                     <ul>
-                        <li class="fragment">Docker necesita que el host sea linux 64bits y que el core sea como mínimo v3.10, se recomienda ubuntu o debian aunque puede ser cualquier distro.</li>
-                        <li class="fragment"><span class="resaltado">uname -r </span>   nos devuelve la versión del core.</li>
-                        <li class="fragment">hay varios métodos para instalarlo, vamos a explicarlo sobre debian 8.</li>
+                        <li>Docker necesita que el host sea linux 64bits y que el core sea como mínimo v3.10, se recomienda ubuntu o debian aunque puede ser cualquier distro.</li>
+                        <li><span class="resaltado">uname -r </span>   nos devuelve la versión del core.</li>
+                        <li>hay varios métodos para instalarlo, vamos a explicarlo sobre debian 8.</li>
                     </ul>
                 </section>
 
                 <section>
                     <h2>Instalación en Linux</h2>
                     <ul>
-                        <li class="fragment"><strong>Actualizamos Apt sources</strong><br/>
+                        <li><strong>Actualizamos Apt sources</strong><br/>
                             editamos <span class="resaltado">/etc/apt/sources.list.d/docker.list</span> y le añadimos<br/>
                                 <code>apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D</code>
                         </li>
-                        <li class="fragment"><strong>Añadimos el repo</strong><br/>
+                        <li><strong>Añadimos el repo</strong><br/>
                             editamos <span class="resaltado">/etc/apt/sources.list.d/docker.list</span> y le añadimos<br/>
                             <code>deb https://apt.dockerproject.org/repo debian-jessie main</code></li>
 
-                        <li class="fragment"><strong>Actualizamos paquetes</strong><br/>
+                        <li><strong>Actualizamos paquetes</strong><br/>
                             <span class="resaltado">apt-get update</span></li>
-                        <li class="fragment"><strong>Instalamos docker y levantamos el servicio</strong><br/>
+                        <li><strong>Instalamos docker y levantamos el servicio</strong><br/>
                             <span class="resaltado">apt-get install docker-engine</span><br/>
                             <span class="resaltado">service docker start</span></li>
                     </ul>
@@ -172,37 +172,37 @@
                     <h2>Windows y  Mac OSX</h2>
 
                     <ul>
-                        <li class="fragment">Necesitamos un hipervisor como <strong>Virtualbox</strong></li>
-                        <li class="fragment">Windows 7 ó superior <a class="fragment" target="_blank" href="https://docs.docker.com/engine/installation/windows">docs.docker.com/engine/installation/windows</a></span></li>
-                        <li class="fragment">Mac OSX 10.8 ó superior <a class="fragment" target="_blank" href="https://docs.docker.com/engine/installation/mac">docs.docker.com/engine/installation/mac</a></span></li>
+                        <li>Necesitamos un hipervisor como <strong>Virtualbox</strong></li>
+                        <li>Windows 7 ó superior <a target="_blank" href="https://docs.docker.com/engine/installation/windows">docs.docker.com/engine/installation/windows</a></span></li>
+                        <li>Mac OSX 10.8 ó superior <a target="_blank" href="https://docs.docker.com/engine/installation/mac">docs.docker.com/engine/installation/mac</a></span></li>
                     </ul>
-                    <u class="fragment">Tres metodos</u>
+                    <u>Tres metodos</u>
 
                     <ul>
-                        <li class="fragment"><strong> Docker toolbox </strong> <br/>
-                            <a class="fragment" target="_blank" href="https://www.docker.com/docker-toolbox">www.docker.com/docker-toolbox</a></li>
-                        <li class="fragment"><strong>Boot2docker</strong>  >>  Tiende a desaparecer.</li>
-                        <li class="fragment"><strong>Vagrant</strong> <br/>
-                            <a class="fragment" target="_blank" href="https://www.vagrantup.com/docs/provisioning/docker.html">www.vagrantup.com/docs/provisioning/docker.html</a></li>
+                        <li><strong> Docker toolbox </strong> <br/>
+                            <a target="_blank" href="https://www.docker.com/docker-toolbox">www.docker.com/docker-toolbox</a></li>
+                        <li><strong>Boot2docker</strong>  >>  Tiende a desaparecer.</li>
+                        <li><strong>Vagrant</strong> <br/>
+                            <a target="_blank" href="https://www.vagrantup.com/docs/provisioning/docker.html">www.vagrantup.com/docs/provisioning/docker.html</a></li>
                     </ul>
                 </section>
 
 
                 <section>
                     <h2>Docker machine</h2>
-                    <span class="fragment"> <strong>Parte de Docker Toolbox, imprescindible en osx y windows.</strong></span>
+                    <span> <strong>Parte de Docker Toolbox, imprescindible en osx y windows.</strong></span>
 
                     <ul>
-                        <li class="fragment">Creamos la máquina <br/>
+                        <li>Creamos la máquina <br/>
                             <span class="resaltado">docker-machine create -d virtualbox drupalcamp</span></li>
-                        <li class="fragment">Para que nuestro la reconozca<br/>
+                        <li>Para que nuestro la reconozca<br/>
                             <span class="resaltado">eval $(docker-machine env drupalcamp)</span></li>
-                        <li class="fragment">Levantamos la máquina<br/>
+                        <li>Levantamos la máquina<br/>
                             <span class="resaltado">docker-machine start drupalcamp</span></li>
-                        <li class="fragment">Paramos la máquina<br/>
+                        <li>Paramos la máquina<br/>
                             <span class="resaltado">docker-machine stop drupalcamp</span></li>
                     </ul>
-                    <a class="fragment" target="_blank" href="https://docs.docker.com/machine/reference/">docs.docker.com/machine/reference</a>
+                    <a target="_blank" href="https://docs.docker.com/machine/reference/">docs.docker.com/machine/reference</a>
                 </section>
 
                 <section>
@@ -221,15 +221,15 @@
                 <section>
                     <h2>Linea de comandos</h2>
 
-                    <strong class="fragment">Sintaxis:</strong><br/>
-                    <code class="fragment">docker [OPTIONS] COMMAND [argumentos]</code><br/>
-                    <code class="fragment">docker [OPTIONS] COMMAND [argumentos] IMAGE</code><br/>
+                    <strong>Sintaxis:</strong><br/>
+                    <code>docker [OPTIONS] COMMAND [argumentos]</code><br/>
+                    <code>docker [OPTIONS] COMMAND [argumentos] IMAGE</code><br/>
                     <br/>
-                    <strong class="fragment">Ejemplos:</strong><br/>
-                    <code class="fragment">docker exec -it 4ac7ebc37986 bash</code><br/>
-                    <code class="fragment">docker run -d --link db:mysql -p 80:80 drupal:7</code><br/>
+                    <strong>Ejemplos:</strong><br/>
+                    <code>docker exec -it 4ac7ebc37986 bash</code><br/>
+                    <code>docker run -d --link db:mysql -p 80:80 drupal:7</code><br/>
                     <br/>
-                    <strong class="fragment">docker COMMAND --help</strong>
+                    <strong>docker COMMAND --help</strong>
 
                 </section>
 
@@ -237,74 +237,397 @@
                     <h2>Cómo funciona?</h2>
 
                     <ul>
-                        <li class="fragment">Descargamos una imagen base de un repositorio. <br/>
+                        <li>Descargamos una imagen base de un repositorio. <br/>
                             <span class="resaltado">docker pull</span></li>
-                        <li class="fragment">A partir de la imagen base creamos nuestro contenedor. <br/>
+                        <li>A partir de la imagen base creamos nuestro contenedor. <br/>
                             <span class="resaltado">docker run</span></li>
-                        <li class="fragment">Realizamos los cambios que deseamos sobre el contenedor.</li>
-                        <li class="fragment">Creamos nuestra imagen personalizada<br/>
+                        <li>Realizamos los cambios que deseamos sobre el contenedor.</li>
+                        <li>Creamos nuestra imagen personalizada<br/>
                             <span class="resaltado">docker commit</span></li>
-                        <li class="fragment">Subimos la imagen a un repositorio (público ó privado).  <br/>
+                        <li>Subimos la imagen a un repositorio (público ó privado).  <br/>
                             <span class="resaltado">docker push</span></li>
-                        <li class="fragment">Reutilizamos nuestra imagen docker como base para nuevos contenedores.</li>
+                        <li>Reutilizamos nuestra imagen docker como base para nuevos contenedores.</li>
                     </ul>
 
                 </section>
 
-                <section>
-                    <h2>Demo</h2>
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Demo 1
+
+                        ```
+                        $ docker pull drupal:7
+                        $ docker run -d --name test drupal:7
+                        ```
+                        Entramos en el contenedor
+                        ```
+                        docker exec -it test bash
+                        ```
+                        Una vez dentro, instalamos drush
+                        ```
+                        curl -sS https://getcomposer.org/installer | php
+                        mv composer.phar /usr/local/bin/composer
+
+                        composer global require drush/drush:7.*
+
+                        export PATH="$HOME/.composer/vendor/bin:$PATH"
+
+                        echo export PATH=\"$HOME/.composer/vendor/bin:$PATH\" >> /root/.bashrc
+                        ```
+                    </script>
+                </section>
+
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Demo 1
+
+                        Paramos el contenedor y lo añadimos a nuestro repositorio local
+
+                        ```
+                        docker stop test
+                        docker commit test test-drupal:7
+                        ```
+                        Lanzamos MySQL
+                        ```
+                        docker run -d --name db-test \
+                        -e MYSQL_ROOT_PASSWORD="1234" \
+                        -e MYSQL_DATABASE="database" \
+                        -e MYSQL_USER="user" \
+                        -e MYSQL_PASSWORD="1234" mysql
+                        ```
+                        Lanzamos nuestra imagen linkada a la base de datos
+                        ```
+                        docker run -d --name nuevo-test --link db-test:db-server -p 8080:80 test-drupal:7
+                        ```
+
+
+                    </script>
+                </section>
+
+                <section data-background-video="video/demo1.mov">
                 </section>
 
                 <section>
                     <h2>Docker-compose</h2>
 
-                    <span class="fragment resaltado">Constructor de aplicaciones multi-contenedor</span><br/>
-                    <strong class="fragment">Qué necesitamos:</strong><br/>
+                    <span class="resaltado">Constructor de aplicaciones multi-contenedor</span><br/>
+                    <strong>Qué necesitamos:</strong><br/>
 
                     <ul>
-                        <li class="fragment">Carpeta del proyecto.</li>
-                        <li class="fragment">fichero <span class="resaltado">docker-compose.yml</span>.</li>
-                        <li class="fragment">levantar todo: <span class="resaltado">docker compose up</span></li>
+                        <li>Carpeta del proyecto.</li>
+                        <li>fichero <span class="resaltado">docker-compose.yml</span>.</li>
+                        <li>levantar todo: <span class="resaltado">docker compose up</span></li>
                     </ul>
-                    <br/>
-                    <strong class="fragment">qué contiene <span class="resaltado">docker-compose.yml</span>?</strong><br/>
+                    <p>
+                        <strong>qué contiene <span class="resaltado">docker-compose.yml</span>?</strong>
+                    </p>
                     <ul>
-                        <li class="fragment">descriptor de los contenedores.</li>
-                        <li class="fragment">formato de serialización <span class="resaltado">yaml</span>.</li>
-                        <li class="fragment">especificamos: contenedores, propiedades, variables de entorno, etc</li>
+                        <li>descriptor de los contenedores.</li>
+                        <li>formato de serialización <span class="resaltado">yaml</span>.</li>
+                        <li>especificamos: contenedores, propiedades, variables de entorno, etc</li>
                     </ul>
 
                 </section>
 
-                <section>
-                    <h2>Demo</h2>
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Demo 2
+
+                        `docker-compose.yml`
+
+                        ```
+                        web:
+                          image: test-drupal:7
+                          links:
+                            - db:db-server
+                          ports:
+                            - 8080:80
+                        db:
+                          image: mysql:5.6
+                          environment:
+                            - MYSQL_ROOT_PASSWORD=1234
+                            - MYSQL_DATABASE=database
+                            - MYSQL_USER=user
+                            - MYSQL_PASSWORD=1234
+                        ```
+                    </script>
+                </section>
+
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Demo 2
+
+                        Creamos los contenedores
+
+                        ```
+                        $ docker-compose up -d
+                        ```
+                        Comprobamos que todo está en ejecución
+                        ```
+                        $ docker-compose ps
+
+                        $ docker ps -a
+                        ```
+                    </script>
+                </section>
+                <section data-background-video="video/demo2.mov">
                 </section>
 
                 <section>
                     <h2>Dockerfile</h2>
 
-                    <span class="fragment"><span class="resaltado">Docker build</span> Construye un contenedor a partir de un Dockerfile.</span><br/>
-                    <span class="fragment"><span class="resaltado">Dockerfile: </span> Archivo de texto plano que contiene un conjunto de instrucciones para construir un contenedor.</span><br/>
-                    <span class="fragment"><span class="resaltado">dockerfile -> docker build</span>    ====    <span class="resaltado">makefile -> drush make</span></span></span><br/>
+                    <span><span class="resaltado">Docker build</span> Construye un contenedor a partir de un Dockerfile.</span><br/>
+                    <span><span class="resaltado">Dockerfile: </span> Archivo de texto plano que contiene un conjunto de instrucciones para construir un contenedor.</span><br/>
+                    <span><span class="resaltado">dockerfile -> docker build</span>    ====    <span class="resaltado">makefile -> drush make</span></span></span><br/>
                     <br/>
-                    <strong class="fragment">Qué necesitamos?</strong><br/>
+                    <strong>Qué necesitamos?</strong><br/>
                     <ul>
-                        <li class="fragment">Carpeta del proyecto.</li>
-                        <li class="fragment">Archivo <span class="resaltado">Dockerfile</span>.</li>
-                        <li class="fragment">Construir: <span class="resaltado">docker build</span>.</li>
+                        <li>Carpeta del proyecto.</li>
+                        <li>Archivo <span class="resaltado">Dockerfile</span>.</li>
+                        <li>Construir: <span class="resaltado">docker build</span>.</li>
                     </ul>
                     <br/>
-                    <span class="fragment">Ejemplos de Dockerfile: <span class="resaltado">github, github y github.</span></span><br/>
-                    <a class="fragment" target="_blank" href="https://docs.docker.com/engine/reference/builder/">docs.docker.com/engine/reference/builder</a>
+                    <span>Ejemplos de Dockerfile: <span class="resaltado">github, github y github.</span></span><br/>
+                    <a target="_blank" href="https://docs.docker.com/engine/reference/builder/">docs.docker.com/engine/reference/builder</a>
 
+                </section>
+
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Demo 3
+
+                        `Dockerfile`
+
+                        ```
+                        FROM drupal:7
+
+                        # Install drush by using composer
+                        ENV COMPOSER_HOME /root/composer
+                        ENV COMPOSER_VERSION master
+
+                        RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
+                        && composer global require drush/drush:7.* \
+                        && ln -sf $COMPOSER_HOME/vendor/bin/drush.php /usr/local/bin/drush \
+                        && drush cache-clear drush
+                        ```
+                    </script>
+                </section>
+
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Demo 3
+
+                        `docker-compose.yml`
+
+                        ```
+                        web:
+                        build: .
+                        links:
+                        - db:db-server
+                        ports:
+                        - 8080:80
+                        db:
+                        image: mysql:5.6
+                        environment:
+                        - MYSQL_ROOT_PASSWORD=1234
+                        - MYSQL_DATABASE=database
+                        - MYSQL_USER=user
+                        - MYSQL_PASSWORD=1234
+                        ```
+                    </script>
+                </section>
+
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Demo 3
+
+                        Construimos los contenedores
+
+                        ```
+                        $ docker-compose build
+
+                        $ docker images
+                        ```
+
+                        Creamos los contenedores
+
+                        ```
+                        $ docker-compose up -d
+                        ```
+                        Comprobamos que todo está en ejecución
+                        ```
+                        $ docker-compose ps
+
+                        $ docker ps -a
+                        ```
+                    </script>
+                </section>
+                <section data-background-video="video/demo3.mov">
+                </section>
+
+                <!-- Demo 4 -->
+
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Demo 4
+
+                        `docker-compose.yml`
+
+                        ```
+                        web:
+                            build: .
+                            links:
+                                - db:db-server
+                            environment:
+                                - VIRTUAL_HOST=test.introbay.com
+                            volumes_from:
+                                - web-stg
+                            mem_limit: 512m
+                            restart: always
+                        web-stg:
+                            build: .
+                            entrypoint: echo "Data-only container for Drupal"
+                            volumes:
+                                - /var/www/html
+                        db:
+                            image: mysql:5.6
+                            environment:
+                                - MYSQL_ROOT_PASSWORD=1234
+                                - MYSQL_DATABASE=database
+                                - MYSQL_USER=user
+                                - MYSQL_PASSWORD=1234
+                            mem_limit: 1024m
+                            restart: always
+                        proxy:
+                            image: jwilder/nginx-proxy
+                            volumes:
+                                - /var/run/docker.sock:/tmp/docker.sock:ro
+                            ports:
+                                - 8080:80
+                            mem_limit: 256m
+                            restart: always
+                        ```
+                    </script>
+                </section>
+
+                <section data-background-video="video/demo4.mov">
                 </section>
 
                 <section>
-                    <h2>Demo</h2>
+                    <h2>Aplicaciones prácticas</h2>
+                    <p>Dependiendo de tu perfil:</p>
+                    <ul>
+                        <li>DevOps</li>
+                        <li>Desarrollador (back o front)</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>DevOps</h2>
+                    <p>Es posible tener diferentes configuraciones dependiendo del entorno</p>
+                    <ul>
+                        <li>
+                            Prod: Mínima configuración, foco en <strong>performance</strong>.
+                        </li>
+                        <li>
+                            Pre-prod: Basado en la configuración de Prod. Se usa habitualmente para construir el entorno de integración.
+                        </li>
+                        <li>
+                            Dev: Basado en Pre-prod, puede añadir herramientas útiles en desarrollo: xdebug, vim, sass compiler, etc.
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>DevOps</h2>
+                    <p>Otras cosas que hacen la vida más fácil:</p>
+                    <ul>
+                        <li>
+                            Distribución de imágenes cocinadas listas para usar en cada entorno.
+                        </li>
+                        <li>
+                            Sistemas de integración continua.
+                        </li>
+                        <li>
+                            Control de versiones sobre la configuración.
+                        </li>
+                        <li>
+                            Eliminación del efecto “a mi me funciona”.
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>DevOps</h2>
+                    <h3>Despliegues</h3>
+                    <ul>
+                        <li>
+                            Las imágenes de nuestra aplicación son los <em>artifacts</em> que desplegamos
+                        </li>
+                        <li>
+                            Worflow simple: generas una imagen, despliegas, post-scripts
+                        </li>
+                        <li>
+                            Desplegar o actualizar una imagen nueva es simple y rápido:<br/>
+                            docker-compose up -d
+                        </li>
+                        <li>
+                            Gestionar actualizaciones y cambios de versión pasa por <em>construir la nueva imagen</em>
+                            y cambiar un número en el docker-compose.yml
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Dev (back & front)</h2>
+                    <ul>
+                        <li>Simplificación del workflow de trabajo.</li>
+                        <li>Posibilidad de tener múltiples entornos en la misma máquina.</li>
+                        <li>Cambiar entre proyectos es fácil.</li>
+                        <li>Desarrollo y tests sobre entorno idéntico a producción.</li>
+                        <li>No queremos saber nada de sistemas!</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Dev (back & front)</h2>
+                    <h3>¿Cómo modifico mi código?</h3>
+                    <p>Hay varias opciones.</p>
+                    <ul>
+                        <li>Entro en el contenedor, uso Vim, git, etc.</li>
+                        <li>Mapeo el directorio donde está mi código y lo modifico desde el exterior. (=> permisos :-S).</li>
+                        <li>Nuestra solución: contenedor extra con SSH y que usa el volumen de Drupal (sshfs).</li>
+                    </ul>
                 </section>
 
+                <section>
+                    <h2>A tener en cuenta...</h2>
+                    <p>No confies en alguien que te diga que Docker es un camino de rosas.</p>
+                </section>
+                <section>
+                    <h2>A tener en cuenta...</h2>
+                    <p>Empieza desde abajo, déjate el balconing.</p>
+                </section>
 
+                <section>
+                    <h2>A tener en cuenta...</h2>
+                    <p>Hay más dockers en el mar.</p>
+                    <p>Google, CoreOs, RancherOs, ...</p>
+                </section>
+                <section>
+                    <h2>A tener en cuenta...</h2>
+                    <p>Cuidado con los trendy guys.</p>
+                </section>
 
+                <section>
+                    <h1>¿Preguntas?</h1>
+                </section>
+
+                <section>
+                    <img src="imgs/logo-tag-centro-blanco.svg" style="width: 30%;box-shadow: none;border: none;">
+                    <img src="imgs/logo_camp.png" style="width: 34%;box-shadow: none;border: none;margin-left: 10%">
+                    <div>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _</div>
+                    <br>
+                    <h1>Gracias</h1>
+
+                    <div>Javier Gómez Gómez</div>
+                    <div>Ignacio López Flores</div>
+                </section>
 
 
             </div>
