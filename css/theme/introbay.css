@@ -92,6 +92,24 @@ body {
   margin: 20px 0;
   line-height: 1.3; }
 
+.reveal span.ampersand{
+  margin: 38px 0 20px 0;
+  color: #575757;
+  font-family: 'museo-sans-500', Impact, sans-serif;
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  text-shadow: none;
+  word-wrap: break-word;
+  font-size: 1.8em;
+
+  float: left;
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+
 /* Ensure certain elements are never larger than the slide itself */
 .reveal img, .reveal video, .reveal iframe {
   max-width: 95%;
