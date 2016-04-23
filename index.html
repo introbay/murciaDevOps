@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 
 	<head>
 		<meta charset="utf-8">
@@ -52,137 +52,229 @@
             <div class="slides">
 
                 <section>
-                    <img class="sin-cajas" src="imgs/logo-tag-centro-blanco.svg" style="width:420px;" />
-                    <div>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _</div>
-                    <br>
-                    <h2>Introducción a <b style="color:#008ec4;">Drupal</b></h2>
-                </section>
-
-                <section>
                     <section>
-                        <h2>Qué <span class="resaltado">es</span> Drupal</h2>
+                        <h2>Conceptos básicos</h2>
                         <ul>
-                            <li class="fragment">Gestor de contenidos modular y muy configurable.</li>
-                            <li class="fragment">Ideal para crear sitios web dinámicos y con gran variedad de funcionalidades.</li>
+                            <li class="fragment"><span class="resaltado">Virtualización: </span>Creación por software de la versión virtual de un recurso tecnológico, habitualmente servidores.</li>
+                            <li class="fragment"><span class="resaltado">Maquina virtual (VM): </span>Emulación de una ordenador físico por medio de software en un sistema anfitrión.</li>
+                            <li class="fragment"><span class="resaltado">Hipervisor: </span>Sistema anfitrión sobre el que funcionan las VM, puede ser por software ó hardware (poco habituales).</li>
+                            <ul>
+                                <li class="fragment"><span class="resaltado">Escritorio: </span>virtualbox, vmware, etc.</li>
+                                <li class="fragment"><span class="resaltado">Servidor: </span>xenserver, proxmox, etc.</li>
+                            </ul>
                         </ul>
                     </section>
+                    <section>
+                        <h2>Linux Containers (LCX)</h2>
+                        <!--<img class="sin-cajas" style="width:600px" src="imgs/Linux-containers.jpg">-->
+                        <ul>
+                            <li class="fragment">Permite que un servidor físico ejecute <span class="resaltado">múltiples instancias</span> de sistemas operativos aislados compartiendo el core.</li>
+                            <li class="fragment">Pueden tener diferentes Sistemas Operativos (debian, centos, redhat, ubuntu, etc.) siempre que tengan la <span class="resaltado">misma versión del core</span> que el sistema anfitrión.</li>
+                            <li class="fragment">Consumen <span class="resaltado">menos recursos</span> hardware y software que las VM.</li>
+                            <li class="fragment">Implementación basada en <span class="resaltado">imágenes</span>.</li>
+                            <li class="fragment"><span class="resaltado">Aislamiento de aplicaciones</span> que se pueden combinar.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>La matriz del infierno</h2>
+                        <img class="sin-cajas" style="width:800px" src="imgs/the-matrix-from-hell.png">
+                    </section>
 
                     <section>
-                        <h2>Qué <span class="resaltado">es</span> Drupal</h2>
-                        <div class="fragment">
-                            <p>Miles de módulos y diseños creados para Drupal.</p>
-                        </div>
-                        <div class="fragment">
-                            <img src="imgs/flecha.png" class="sin-cajas" style="width:70px ">
-                            <p>Minimiza código a medida.</p>
-                        </div>
-                        <div class="fragment">
-                            <img src="imgs/flecha.png" class="sin-cajas" style="width:70px ">
-                            <p>Optimizando la eficiencia de portales.</p>
-                        </div>
+                        <h2>Y llegó Docker</h2>
+                        <ul>
+                            <li class="fragment">LCX <span class="resaltado">independiza</span> sistemas operativos ligeros sobre los que lanzar aplicaciones.</li>
+                            <li class="fragment">Docker define un formato para <span class="resaltado">empaquetar una aplicación</span> y todas sus <span class="resaltado">dependencias</span> en un solo objeto que pueden ser transferidas a cualquier otro sistema Docker, y ser ejecutados allí con la garantía de que el entorno de ejecución será <span class="resaltado">siempre el mismo.</span></li>
+                            <li class="fragment"><strong>Contenedores:</strong> contienen todo lo necesario para que una aplicación pueda funcionar.</li>
+                            <li class="fragment"><strong>Imágenes:</strong> sistema operativo con aplicaciones instaladas y configuradas.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>La solución de Docker</h2>
+                        <img class="sin-cajas" style="width:800px" src="imgs/Screen_Shot_2014-10-27_at_11.24.59_PM.png">
+                    </section>
+                    <section>
+                        <h2>Docker Registry</h2>
+                        <ul>
+                            <li class="fragment"><span class="resaltado">Registry: </span>Servidor que contiene repositorios e imágenes.</li>
+                            <li class="fragment"><span class="resaltado">Repositorios: </span>Contiene imagenes creadas y listas para ser descargadas.</li>
+                            <li class="fragment">Repositorio oficial <span class="resaltado">
+                                <a target="_blank" href="https://hub.docker.com/">https://hub.docker.com</a>
+                            <li class="fragment">En <span class="resaltado">Dockerhub</span> podemos crear repositorios privados ó públicos.</li>
+                            <li class="fragment">Dockerhub se integra con repositorios de código como <span class="resaltado">GitHub</span> y construye las imagenes al actualizarlos.</li>
+                            <li class="fragment">También podemos tener nuestro propio Registry que se crea a partir de una imagen Docker.</li>
+                        </ul>
+                        <!--<img class="sin-cajas" style="width:600px" src="imgs/docker-structure.jpg">-->
                     </section>
                 </section>
 
                 <section>
-                    <h2>Drupal <span class="resaltado">es</span> Flexibilidad</h2>
+                    <h2>Requisitos de Docker</h2>
                     <ul>
-                        <li>Una de las plataformas más flexibles</li>
-                        <li>Altamente personalizable</li>
-                    </ul>
-                    <p>
-                        <img class="sin-cajas" style="width:600px" src="imgs/flex-drupal.png">
-                    </p>
-                </section>
-
-                <section>
-                    <h2>Drupal <span class="resaltado">es</span> Amplia comunidad profesional</h2>
-
-                    <ul>
-                        <li>Drupal.org tiene más de 1 millón de usuarios</li>
-                        <li>230 paises</li>
-                        <li>181 idiomas</li>
-                        <li>Profesionalización = Usuarios cualificados</li>
+                        <li class="fragment">Docker necesita que el host sea linux 64bits y que el core sea como mínimo v3.10, se recomienda ubuntu o debian aunque puede ser cualquier distro.</li>
+                        <li class="fragment"><span class="resaltado">uname -r </span>   nos devuelve la versión del core.</li>
+                        <li class="fragment">hay varios métodos para instalarlo, vamos a explicarlo sobre debian 8.</li>
                     </ul>
                 </section>
 
                 <section>
-                    <section>
-                    <h2>Drupal <span class="resaltado">es</span> Open Source</h2>
-
-                    <p>Código abierto</p>
-                    <img src="imgs/flecha.png" class="sin-cajas" style="width:70px ">
-                    <p>Continuo crecimiento y desarrollo</p>
-                    <img src="imgs/flecha.png" class="sin-cajas" style="width:70px ">
-                    <p>Última generación</p>
-                </section>
-
-                <section>
-                    <h2>Drupal <span class="resaltado">es</span> Open Source</h2>
-
+                    <h2>Instalación en Linux</h2>
                     <ul>
-                        <li>Licencia GNU/GPL de libre uso</li>
-                        <li>Cambios de manera rápida</li>
-                        <li>Reducción de costes</li>
-                        <li>Escalable</li>
-                        <li>Solución de errores y mejora con más rapidez</li>
-                    </ul>
-                </section>
-                </section>
-
-                <section>
-                    <h2>Drupal <span class="resaltado">es</span> gratuito</h2>
-                    <p>Su licencia es de libre uso y su código es abierto</p>  
-                    <img class="sin-cajas" style="width:500px" src="imgs/community.png">
-                </section>
-
-                <section>
-                    <section>
-                        <h2>Drupal <span class="resaltado">es</span> Seguridad</h2>
-                        <p>Drupal.org mantiene a un equipo dedicado exclusivamente a la seguridad.</p>
-                        <img class="sin-cajas" style="width:350px;" src="imgs/shield.png">
-                    </section>
-                    <section>
-                        <h2>Drupal <span class="resaltado">es</span> Seguridad</h2>
-                        <p>Uno de los gestores de contenidos más seguros que existen ya que está construido con la seguridad en mente.</p>
-                        <p>Control total de la plataforma y un sistema de permisos basado en roles.</p>
-                    </section>
-                </section>
-
-                <section>
-                    <h2>Drupal <span class="resaltado">es</span> importante</h2>
-
-                    <p>Algunos de los organismos más importartes del mundo confian en drupal.</p>
-
-                    <ul>
-                        <li>
-                            Internacionales: <br/>
-                            <a target="_blank" href="http://www.warnerbros.com/">Warner Bros</a>, 
-                            <a target="_blank" href="http://zyngagames.com/">Zynga</a>, 
-                            <a target="_blank" href="https://www.packtpub.com/">PACKT Publishing</a>, 
-                            <a target="_blank" href="http://www.weather.com/">The Weather Channel</a>, 
-                            <a target="_blank" href="http://www.menshealth.com/">Mens Health</a>, 
-                            <a target="_blank" href="http://www.lefigaro.fr/">Le Figaro</a>, 
-                            <a target="_blank" href="http://www.royalmail.com/">Royal Mail</a>, 
-                            <a target="_blank" href="http://www.gouvernement.fr/">Gobierno francés</a>, 
-                            <a target="_blank" href="http://www.economist.com/">The Economist</a> o la misma
-                            <a target="_blank" href="https://www.whitehouse.gov/">Casa Blanca</a>
+                        <li class="fragment"><strong>Actualizamos Apt sources</strong><br/>
+                            editamos <span class="resaltado">/etc/apt/sources.list.d/docker.list</span> y le añadimos<br/>
+                                <code>apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D</code>
                         </li>
-                        <br>
-                        <li>
-                            Nacionales: <br/>
-                            <a target="_blank" href="http://www.rae.es/">RAE</a>, 
-                            <a target="_blank" href="http://kinepolis.es/">Kinepolis</a>, 
-                            <a target="_blank" href="http://www.telemadrid.es/">Telemadrid</a>, 
-                            <a target="_blank" href="http://www.museoreinasofia.es/">Museo Reina Sofía</a>,
-                            <a target="_blank" href="http://www.idealista.com/news/">Idealista News</a>,  
-                            <a target="_blank" href="http://www.mcdonalds.es/">McDonalds</a>, 
-                            <a target="_blank" href="http://www.castillalamancha.es/">Ayuntamiento de Castilla La Mancha</a>, 
-                            <a target="_blank" href="http://parquedeatracciones.es/">Parque de Atracciones de Madrid</a>, 
-                            <a target="_blank" href="http://www.boing.es/">Boing</a>, 
-                            <a target="_blank" href="http://faunia.es/">Faunia</a>, ... y cada día más.
-                        </li>
+                        <li class="fragment"><strong>Añadimos el repo</strong><br/>
+                            editamos <span class="resaltado">/etc/apt/sources.list.d/docker.list</span> y le añadimos<br/>
+                            <code>deb https://apt.dockerproject.org/repo debian-jessie main</code></li>
+
+                        <li class="fragment"><strong>Actualizamos paquetes</strong><br/>
+                            <span class="resaltado">apt-get update</span></li>
+                        <li class="fragment"><strong>Instalamos docker y levantamos el servicio</strong><br/>
+                            <span class="resaltado">apt-get install docker-engine</span><br/>
+                            <span class="resaltado">service docker start</span></li>
                     </ul>
                 </section>
+
+                <section>
+                    <h2>Windows y  Mac OSX</h2>
+
+                    <ul>
+                        <li class="fragment">Necesitamos un hipervisor como <strong>Virtualbox</strong></li>
+                        <li class="fragment">Windows 7 ó superior <a class="fragment" target="_blank" href="https://docs.docker.com/engine/installation/windows">docs.docker.com/engine/installation/windows</a></span></li>
+                        <li class="fragment">Mac OSX 10.8 ó superior <a class="fragment" target="_blank" href="https://docs.docker.com/engine/installation/mac">docs.docker.com/engine/installation/mac</a></span></li>
+                    </ul>
+                    <u class="fragment">Tres metodos</u>
+
+                    <ul>
+                        <li class="fragment"><strong> Docker toolbox </strong> <br/>
+                            <a class="fragment" target="_blank" href="https://www.docker.com/docker-toolbox">www.docker.com/docker-toolbox</a></li>
+                        <li class="fragment"><strong>Boot2docker</strong>  >>  Tiende a desaparecer.</li>
+                        <li class="fragment"><strong>Vagrant</strong> <br/>
+                            <a class="fragment" target="_blank" href="https://www.vagrantup.com/docs/provisioning/docker.html">www.vagrantup.com/docs/provisioning/docker.html</a></li>
+                    </ul>
+                </section>
+
+
+                <section>
+                    <h2>Docker machine</h2>
+                    <span class="fragment"> <strong>Parte de Docker Toolbox, imprescindible en osx y windows.</strong></span>
+
+                    <ul>
+                        <li class="fragment">Creamos la máquina <br/>
+                            <span class="resaltado">docker-machine create -d virtualbox drupalcamp</span></li>
+                        <li class="fragment">Para que nuestro la reconozca<br/>
+                            <span class="resaltado">eval $(docker-machine env drupalcamp)</span></li>
+                        <li class="fragment">Levantamos la máquina<br/>
+                            <span class="resaltado">docker-machine start drupalcamp</span></li>
+                        <li class="fragment">Paramos la máquina<br/>
+                            <span class="resaltado">docker-machine stop drupalcamp</span></li>
+                    </ul>
+                    <a class="fragment" target="_blank" href="https://docs.docker.com/machine/reference/">docs.docker.com/machine/reference</a>
+                </section>
+
+                <section>
+                    <h2>Instalación  en servicios cloud</h2>
+
+                    <img class="sin-cajas" style="width:200px" src="imgs/logo-amazon.png">
+                    <img class="sin-cajas" style="width:200px" src="imgs/logo-azure.png">
+                    <img class="sin-cajas" style="width:200px" src="imgs/logo-google-cloud.png">
+                    <img class="sin-cajas" style="width:200px" src="imgs/logo-IBM-sotflayer.png">
+                    <img class="sin-cajas" style="width:200px" src="imgs/logo-rackspace.png">
+                    <br/>
+                    <a target="_blank" href="https://docs.docker.com/engine/installation/cloud/">docs.docker.com/engine/installation/cloud</a>
+                    <a target="_blank" href="https://docs.docker.com/machine/drivers/">docs.docker.com/machine/drivers</a>
+                </section>
+
+                <section>
+                    <h2>Linea de comandos</h2>
+
+                    <strong class="fragment">Sintaxis:</strong><br/>
+                    <code class="fragment">docker [OPTIONS] COMMAND [argumentos]</code><br/>
+                    <code class="fragment">docker [OPTIONS] COMMAND [argumentos] IMAGE</code><br/>
+                    <br/>
+                    <strong class="fragment">Ejemplos:</strong><br/>
+                    <code class="fragment">docker exec -it 4ac7ebc37986 bash</code><br/>
+                    <code class="fragment">docker run -d --link db:mysql -p 80:80 drupal:7</code><br/>
+                    <br/>
+                    <strong class="fragment">docker COMMAND --help</strong>
+
+                </section>
+
+                <section>
+                    <h2>Cómo funciona?</h2>
+
+                    <ul>
+                        <li class="fragment">Descargamos una imagen base de un repositorio. <br/>
+                            <span class="resaltado">docker pull</span></li>
+                        <li class="fragment">A partir de la imagen base creamos nuestro contenedor. <br/>
+                            <span class="resaltado">docker run</span></li>
+                        <li class="fragment">Realizamos los cambios que deseamos sobre el contenedor.</li>
+                        <li class="fragment">Creamos nuestra imagen personalizada<br/>
+                            <span class="resaltado">docker commit</span></li>
+                        <li class="fragment">Subimos la imagen a un repositorio (público ó privado).  <br/>
+                            <span class="resaltado">docker push</span></li>
+                        <li class="fragment">Reutilizamos nuestra imagen docker como base para nuevos contenedores.</li>
+                    </ul>
+
+                </section>
+
+                <section>
+                    <h2>Demo</h2>
+                </section>
+
+                <section>
+                    <h2>Docker-compose</h2>
+
+                    <span class="fragment resaltado">Constructor de aplicaciones multi-contenedor</span><br/>
+                    <strong class="fragment">Qué necesitamos:</strong><br/>
+
+                    <ul>
+                        <li class="fragment">Carpeta del proyecto.</li>
+                        <li class="fragment">fichero <span class="resaltado">docker-compose.yml</span>.</li>
+                        <li class="fragment">levantar todo: <span class="resaltado">docker compose up</span></li>
+                    </ul>
+                    <br/>
+                    <strong class="fragment">qué contiene <span class="resaltado">docker-compose.yml</span>?</strong><br/>
+                    <ul>
+                        <li class="fragment">descriptor de los contenedores.</li>
+                        <li class="fragment">formato de serialización <span class="resaltado">yaml</span>.</li>
+                        <li class="fragment">especificamos: contenedores, propiedades, variables de entorno, etc</li>
+                    </ul>
+
+                </section>
+
+                <section>
+                    <h2>Demo</h2>
+                </section>
+
+                <section>
+                    <h2>Dockerfile</h2>
+
+                    <span class="fragment"><span class="resaltado">Docker build</span> Construye un contenedor a partir de un Dockerfile.</span><br/>
+                    <span class="fragment"><span class="resaltado">Dockerfile: </span> Archivo de texto plano que contiene un conjunto de instrucciones para construir un contenedor.</span><br/>
+                    <span class="fragment"><span class="resaltado">dockerfile -> docker build</span>    ====    <span class="resaltado">makefile -> drush make</span></span></span><br/>
+                    <br/>
+                    <strong class="fragment">Qué necesitamos?</strong><br/>
+                    <ul>
+                        <li class="fragment">Carpeta del proyecto.</li>
+                        <li class="fragment">Archivo <span class="resaltado">Dockerfile</span>.</li>
+                        <li class="fragment">Construir: <span class="resaltado">docker build</span>.</li>
+                    </ul>
+                    <br/>
+                    <span class="fragment">Ejemplos de Dockerfile: <span class="resaltado">github, github y github.</span></span><br/>
+                    <a class="fragment" target="_blank" href="https://docs.docker.com/engine/reference/builder/">docs.docker.com/engine/reference/builder</a>
+
+                </section>
+
+                <section>
+                    <h2>Demo</h2>
+                </section>
+
+
+
+
+
             </div>
         </div>
 
