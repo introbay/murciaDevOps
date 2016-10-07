@@ -1,0 +1,32 @@
+web:
+  build: .
+  links:
+    - db:db-server
+  environment:
+    - VIRTUAL_HOST=test.introbay.com
+  volumes_from:
+    - web-stg
+  mem_limit: 512m
+  restart: always
+web-stg:
+  build: .
+  entrypoint: echo "Data-only container for Drupal"
+  volumes:
+    - /var/www/html
+db:
+  image: mysql:5.6
+  environment:
+    - MYSQL_ROOT_PASSWORD=1234
+    - MYSQL_DATABASE=database
+    - MYSQL_USER=user
+    - MYSQL_PASSWORD=1234
+  mem_limit: 1024m
+  restart: always
+proxy:
+  image: jwilder/nginx-proxy
+  volumes:
+    - /var/run/docker.sock:/tmp/docker.sock:ro
+  ports:
+    - 8080:80
+  mem_limit: 256m
+  restart: always
